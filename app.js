@@ -9,11 +9,21 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
+  useUnifiedTopology: true,
 });
 const { PORT = 3000 } = process.env;
 const app = express();
-app.use(bodyParser());
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use((req, res, next) => {
+  req.user = {
+    _id: '5f37cc0b089dce31c8067ceb',
+  };
+
+  next();
+});
 app.use('/cards', cardsRouter);
 app.use('/users', userRouter);
 app.use((req, res) => {
