@@ -1,22 +1,22 @@
 {
-  "name": "project_12_node_js",
-  "version": "0.0.1",
+  "name": "project_13_node_js",
+  "version": "0.0.2",
   "description": "backend for project \"Mesto\"",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maximkin-alek/Project_12_node_js.git"
+    "url": "git+https://https://github.com/maximkin-alek/Project_13_No_SQL.git"
   },
   "author": "Alexander Maximkin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maximkin-alek/Project_12_node_js/issues"
+    "url": "https://https://github.com/maximkin-alek/Project_13_No_SQL/issues"
   },
-  "homepage": "https://github.com/maximkin-alek/Project_12_node_js#readme",
+  "homepage": "https://https://github.com/maximkin-alek/Project_13_No_SQL#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
