@@ -35,3 +35,29 @@ module.exports.deleteCard = (req, res) => {
     })
     .catch(() => res.status(500).send({ message: 'Ошибка сервера' }));
 };
+
+module.exports.likeCard = (req, res) => {
+  Card.findByIdAndUpdate(
+    req.params.id,
+    { $addToSet: { likes: req.user._id } },
+    { new: true },
+  )
+    .orFail(() => {
+      res.status(404).send({ message: 'Такой карточки не существует' });
+    })
+    .then((card) => { res.send({ data: card }); })
+    .catch(() => res.status(500).send({ message: 'Ошибка сервера' }));
+};
+
+module.exports.dislikeCard = (req, res) => {
+  Card.findByIdAndUpdate(
+    req.params.id,
+    { $pull: { likes: req.user._id } },
+    { new: true },
+  )
+    .orFail(() => {
+      res.status(404).send({ message: 'Такой карточки не существует' });
+    })
+    .then((card) => { res.send({ data: card }); })
+    .catch(() => res.status(500).send({ message: 'Ошибка сервера' }));
+};
