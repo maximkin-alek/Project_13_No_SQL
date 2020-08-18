@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/maximkin-alek/Project_13_No_SQL.git"
+    "url": "git+https://github.com/maximkin-alek/Project_13_No_SQL.git"
   },
   "author": "Alexander Maximkin",
   "license": "ISC",
   "bugs": {
-    "url": "https://https://github.com/maximkin-alek/Project_13_No_SQL/issues"
+    "url": "https://github.com/maximkin-alek/Project_13_No_SQL/issues"
   },
-  "homepage": "https://https://github.com/maximkin-alek/Project_13_No_SQL#readme",
+  "homepage": "https://github.com/maximkin-alek/Project_13_No_SQL#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
